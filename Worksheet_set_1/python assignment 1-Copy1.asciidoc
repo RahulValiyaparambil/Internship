@@ -1,0 +1,102 @@
++*In[1]:*+
+[source, ipython3]
+----
+def factorial(x):
+    if x == 0 or x == 1:
+        return 1
+    else:
+        return x * factorial(x - 1)
+num = int(input("Enter a number: "))
+
+if num < 0:
+    print("Factorial is not defined for negative numbers.")
+elif num == 0:
+    print("The factorial of 0 is 1.")
+else:
+    result = factorial(num)
+    print(f"The factorial of {num} is {result}.")
+----
+
+
++*Out[1]:*+
+----
+Enter a number: 5
+The factorial of 5 is 120.
+----
+
+
++*In[2]:*+
+[source, ipython3]
+----
+num = int(input("Enter any number : "))
+if num > 1:
+    for i in range(2, num):
+        if (num % i) == 0:
+            print(num, "is NOT a prime number")
+            break
+    else:
+        print(num, "is a PRIME number")
+elif num == 0 or 1:
+    print(num, "is a neither prime NOR composite number")
+else:
+    print(num, "it is a COMPOSITE number")
+----
+
+
++*Out[2]:*+
+----
+Enter any number : 8
+8 is NOT a prime number
+----
+
+
++*In[3]:*+
+[source, ipython3]
+----
+def isPalindrome(string):
+    if string==string[::-1]:
+        return "it is a palindrome"
+    else:
+        return "it is not a palindrome"
+
+s1="MALAYALAM"
+s2="dgahaafr"
+print(s1,":",isPalindrome(s1))
+print(s2,":",isPalindrome(s2))
+----
+
+
++*Out[3]:*+
+----
+MALAYALAM : it is a palindrome
+dgahaafr : it is not a palindrome
+----
+
+
++*In[4]:*+
+[source, ipython3]
+----
+string = "aefsdfggrhfghfghngjuyhgggfgnbghjngfjhgjg"
+result = {}
+
+for i in string:
+    if i in result:
+        result[i] += 1
+    else:
+        result[i] = 1
+
+print("Result is:- ", result)
+----
+
+
++*Out[4]:*+
+----
+Result is:-  {'a': 1, 'e': 1, 'f': 6, 's': 1, 'd': 1, 'g': 13, 'r': 1, 'h': 6, 'n': 3, 'j': 4, 'u': 1, 'y': 1, 'b': 1}
+----
+
+
++*In[ ]:*+
+[source, ipython3]
+----
+
+----
